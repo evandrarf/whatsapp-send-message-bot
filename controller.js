@@ -1,3 +1,4 @@
+// Send message using GET
 const sendMessageGet = async (req, res, client) => {
   try {
     const { number, message } = req.query;
@@ -11,6 +12,7 @@ const sendMessageGet = async (req, res, client) => {
   }
 };
 
+// Send message using POST
 const sendMessagePost = async (req, res, client) => {
   try {
     const { number, message } = req.body;
