@@ -6,9 +6,15 @@ const sendMessageGet = async (req, res, client) => {
     const number_details = await client.getNumberId(number);
     client.sendMessage(number_details._serialized, message);
 
-    res.send("Message sent!");
+    res.json({
+      status: "success",
+      message: "Message sent!",
+    });
   } catch (error) {
-    res.send(error);
+    res.json({
+      status: "error",
+      message: "Invalid request",
+    });
   }
 };
 
@@ -20,9 +26,15 @@ const sendMessagePost = async (req, res, client) => {
     const number_details = await client.getNumberId(number);
     client.sendMessage(number_details._serialized, message);
 
-    res.send("Message sent!");
+    res.json({
+      status: "success",
+      message: "Message sent!",
+    });
   } catch (error) {
-    res.send(error);
+    res.json({
+      status: "error",
+      message: "Invalid request",
+    });
   }
 };
 
