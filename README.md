@@ -1,5 +1,11 @@
 ## API Reference
 
+### Web Api
+
+```http
+https://demo-wabot.evandrarf.my.id
+```
+
 #### Send message using method GET
 
 ```http
@@ -14,7 +20,7 @@
 #### Example
 
 ```http
-  GET /send-message?number=62812345678&message=This+is+a+test+message
+  GET https://demo-wabot.evandrarf.my.id/send-message?number=62812345678&message=This+is+a+test+message
 ```
 
 Make sure if the message is a string that has been urlencoded
@@ -35,7 +41,7 @@ Make sure if the message is a string that has been urlencoded
 #### Example
 
 ```http
-  POST /send-message
+  POST https://demo-wabot.evandrarf.my.id/send-message
 ```
 
 ##### Request body
