@@ -7,6 +7,10 @@ const { sendMessageGet, sendMessagePost } = require("./controller.js");
 // Initialize the client
 const client = new Client({
   authStrategy: new LocalAuth(),
+  puppeteer: {
+    headless: true,
+    args: ["--no-sandbox", "--disable-setuid-sandbox", "--disable-extensions"],
+  },
 });
 
 // Set up the express server
